@@ -5,7 +5,7 @@ class Candidate(models.Model):
     last_name = models.CharField('姓', max_length=10)
     age = models.PositiveIntegerField('年齡')
     politics = models.TextField('政見')
-    vote = models.PositiveIntegerField('得票數')
+    vote = models.PositiveIntegerField('得票數', default=0)
 
     def __str__(self):
         return self.first_name
